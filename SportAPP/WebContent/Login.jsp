@@ -17,7 +17,7 @@
 			<label for="nombreUsuario">Nombre de Usuario</label><br /> <input
 				name="nombreUsuario" type="text" /> <br /> <label
 				for="contrasenaUsuario">Contrasena</label><br /> <input
-				name="contrasenaUsuario" type="text" /> <br /> 
+				name="contrasenaUsuario" type="password" /> <br /> 
 				<a href="Olvidar.jsp">¿Olvido la
 			contrasena?</a>
 			<button type="submit" value="login">Ingresar Sesion</button>

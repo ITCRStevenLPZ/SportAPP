@@ -4,9 +4,20 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Menu Principal</title>
 </head>
 <body>
+	<%
+		if(session.getAttribute("nombreUsuario")==null){
+			response.sendRedirect("Login.jsp");
+			out.println(session.getAttribute("nombreUsuario") +"\n" + session.getAttribute("contrasena")+"\n");
+		}
+	%>
+¡Bienvenido(a) a SportAPP!
+
+<form action="logout">
+		<input type = "submit" value = "logout" >
+</form>
 
 </body>
 </html>

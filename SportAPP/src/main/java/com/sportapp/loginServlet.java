@@ -14,8 +14,8 @@ public class loginServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		String nombreUsuario = req.getParameter("nombreUsuario");
 		String contrasenaUsuario = req.getParameter("contrasenaUsuario");;
-		PrintWriter out = res.getWriter();
-		out.println(nombreUsuario +"\n" + contrasenaUsuario+"\n");
+		PrintWriter out = res.getWriter();		
+		res.sendRedirect("Menu.jsp");
 	}
 
 
