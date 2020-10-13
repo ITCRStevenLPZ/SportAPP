@@ -8,12 +8,15 @@
 </head>
 <body>
 	<%
+		response.setHeader("Cache-Control", "no-cache,no-store,must-revalidate");
+		
 		if(session.getAttribute("nombreUsuario")==null){
-			response.sendRedirect("Login.jsp");
-			out.println(session.getAttribute("nombreUsuario") +"\n" + session.getAttribute("contrasena")+"\n");
+			response.sendRedirect("Login.jsp");	
 		}
 	%>
 ¡Bienvenido(a) a SportAPP!
+
+
 
 <form action="logout">
 		<input type = "submit" value = "logout" >
