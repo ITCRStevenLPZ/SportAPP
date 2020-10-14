@@ -18,7 +18,7 @@ body, html {
   /* The image used */
   background-image: url("fondo1.jpg");
 
-  min-height: 1600px;
+  min-height: 1700px;
 
   /* Center and scale the image nicely */
   background-position: center;
@@ -39,7 +39,7 @@ body, html {
 }
 .container2 {
   position: absolute;
-  margin: 70px;
+  margin: 70px 0px 0px 475px;
   max-width: 600px;
   padding: 20px;
   background-color: white;
@@ -74,7 +74,7 @@ input[type=text]:focus, input[type=password]:focus {
   opacity: 1;
 }
 img {
-  display: block;
+  display: inline;
   margin-left: 350px;
   margin-right: auto;
 }
@@ -86,14 +86,14 @@ img {
 <img src="Logo.png" alt="Logo SportAPP" style="width:30%;">
 	<form action="Login.jsp" class="container2">
 	
-		<legend> ¿Ya tienes cuenta en la aplicacion? </legend> <br/> 
+		<b> ¿Ya tienes cuenta en la aplicacion? </b> <br/> <br/>
 		
 		<button type="submit" value="login" class="btn">Ingresa Sesion Aca!</button>
 
 	</form>
 	<form accept-charset="ISO-8859-1" action="register" autocomplete="off"
 		method="post" class="container">
-		
+		<fieldset>
 			<h1>¡Registrate!</h1>
 			<p>Todos los campos son de caracter obligatorios.</p>
 			
@@ -106,8 +106,6 @@ img {
 			<label for="cedulaPersona"><b>Cédula</b></label><br /> <input placeholder="Ingresar Cedula" name="cedulaPersona" type="text" required/> <br /> 
 			
 			<label for="telefonoPersona"><b>Numero de Telefono</b></label><br /> <input placeholder="Ingresar Numero Telefonico" name="telefonoPersona" type="text" required/> <br />
-			
-			<label for="telefonoPersona2"><b>Numero de Telefono #2</b></label><br /> <input placeholder="Ingresar Numero de Telefono Alternativo" name="telefonoPersona2" type="text" required/> <br />
 			
 			<label for="nombreUsuario"><b>Nombre de Usuario</b></label><br /> <input placeholder="Ingresar Nombre de Usuario" name="nombreUsuario" type="text" required/> <br /> 
 			
@@ -122,7 +120,7 @@ img {
 			
 			<input checked="checked" name="Sexo" type="radio" value="Hombre" required/> <b>Hombre   </b> <input name="Sexo" type="radio" value="Mujer" required/><b> Mujer</b> <br /> <br />
 			
-			<legend>Preguntas de Seguridad. ¡Con ellas puedes recuperar tu contrasena!</legend> <br /> 
+			<p>Preguntas de Seguridad. ¡Con ellas puedes recuperar tu contrasena!</p> 
 			
 			<label for="pregunta1"><b>¿Cual es su color favorito?</b></label><br /> <input placeholder="Ingresar Respuesta a Pregunta" name="pregunta1" type="text" required/> <br /> 
 			
@@ -137,7 +135,7 @@ img {
 			<input checked="checked" name="Deporte" type="radio" value="Si" required/>Si he practricado deporte <input name="Deporte" type="radio" value="No" required/>No he practicado deporte <br /> <br />
 
 			<button type="submit" value="register" class="btn">Registrarse</button> <br />
-			
+		</fieldset>	
 	</form>
 </div>	
 

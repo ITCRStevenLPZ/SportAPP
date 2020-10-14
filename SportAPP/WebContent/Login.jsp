@@ -20,7 +20,7 @@ body, html {
   /* The image used */
   background-image: url("fondo1.jpg");
 
-  min-height: 480px;
+  min-height: 600px;
 
   /* Center and scale the image nicely */
   background-position: center;
@@ -35,7 +35,7 @@ body, html {
   right: 0;
   top: 0;
   margin: 30px;
-  max-width: 600px;
+  max-width: 700px;
   padding: 20px;
   background-color: white;
 }
@@ -44,7 +44,7 @@ body, html {
   right: 50;
   top: 0;
   margin: 30px;
-  max-width: 600px;
+  max-width: 700px;
   padding: 20px;
   background-color: white;
 }
@@ -89,14 +89,19 @@ img {
 <img src="Logo.png" alt="Logo SportAPP" style="width:30%;">
 	<form accept-charset="UTF-8" action="login" autocomplete="off"
 		method="post" class = "container">
-			<legend>¡Si ya tienes cuenta, ingresa!</legend>
-			<label for="nombreUsuario"><b>Nombre de Usuario</b></label><br /> <input name="nombreUsuario" type="text" required/> <br />
+		<fieldset>
+			<h1>Iniciar Sesion</h1>
+			<p>¡Si ya tienes cuenta, ingresa!</p>
+			<label for="nombreUsuario"><b>Nombre de Usuario</b></label><br /> <input placeholder="Ingresar Nombre de Usuario" name="nombreUsuario" type="text" required/> <br />
 
-			<label for="contrasenaUsuario"><b>Contrasena</b></label><br /> <input name="contrasenaUsuario" type="password" required/> <br />
+			<label for="contrasenaUsuario"><b>Contrasena</b></label><br /> <input placeholder="Ingresar Contrasena" name="contrasenaUsuario" type="password" required/> <br />
+			
+			<input type="checkbox" onclick="mostrarContrasena()"><b> Mostrar Contrasena </b> <br /> <br /> 	
 
-			<a href="Olvidar.jsp">¿Olvido la contrasena?</a>
+			<a href="Olvidar.jsp">¿Olvido la contrasena?</a><br /> <br />
 			
 			<button type="submit" value="login" class = "btn">Ingresar Sesion</button>
+		</fieldset>
 	</form>
 	<form action="Register.jsp" class = "container2">	
 	<legend>¿Eres nuevo?, ¡Registrate!<br ></legend>
