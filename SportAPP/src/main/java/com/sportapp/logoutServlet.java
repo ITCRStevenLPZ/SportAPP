@@ -13,6 +13,7 @@ public class logoutServlet extends HttpServlet {
 		HttpSession session = req.getSession();
 		session.removeAttribute("nombreUsuario");
 		session.removeAttribute("contrasena");
+		session.removeAttribute("cedula");
 		session.invalidate();
 		res.sendRedirect("Login.jsp");
 	}

@@ -107,5 +107,6 @@ img {
 	<legend>¿Eres nuevo?, ¡Registrate!<br ></legend>
 	<button type="submit" class = "btn" value="register">¡Registrate Aca!</button>
 	</form>
+	
 </body>
 </html>

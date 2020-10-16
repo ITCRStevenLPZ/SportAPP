@@ -35,4 +35,40 @@
 		<servlet-name>logout</servlet-name>
 		<url-pattern>/logout</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ingPesos</servlet-name>
+		<servlet-class>com.sportapp.pesos.ingPesosServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ingPesos</servlet-name>
+		<url-pattern>/ingPesos</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>selPesos</servlet-name>
+		<servlet-class>com.sportapp.pesos.selPesosServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>selPesos</servlet-name>
+		<url-pattern>/selPesos</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ingFrecuencias</servlet-name>
+		<servlet-class>com.sportapp.frecuencias.ingFrecServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ingFrecuencias</servlet-name>
+		<url-pattern>/ingFrecuencias</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>selFrecuencias</servlet-name>
+		<servlet-class>com.sportapp.frecuencias.selFrecServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>selFrecuencias</servlet-name>
+		<url-pattern>/selFrecuencias</url-pattern>
+	</servlet-mapping>
 </web-app>

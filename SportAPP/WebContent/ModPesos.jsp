@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Control Pesos</title>
+<title>Modificacion de Pesos</title>
 
 <style>
 * {box-sizing: border-box;}
@@ -74,22 +74,32 @@ img {
   display: inline;
   margin: 0px 0px 0px 20px;
 }
+.bg-img {
+  /* The image used */
+  background-image: url("fondo1.jpg");
+
+  min-height: 1700px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-size: cover;
+  position: relative;
+
+}
 .container {
   position: absolute;
-  margin: 300px 0px 0px 475px;
-  min-width: 1000px;
+  margin: 250px 700px;
+  min-width: 600px;
   padding: 20px;
   background-color: white;
-}
 }
 .container2 {
   position: absolute;
-  margin: 70px 0px 0px 475px;
-  max-width: 600px;
+  margin: 750px 700px;
+  min-width: 600px;
   padding: 20px;
   background-color: white;
 }
-
 /* Full-width input fields */
 input[type=text], input[type=password] {
   width: 100%;
@@ -115,10 +125,6 @@ input[type=text]:focus, input[type=password]:focus {
   opacity: 0.9;
 }
 
-.btn:hover {
-  opacity: 1;
-}
-
 .btn2 {
   background-color: #9933ff;
   color: white;
@@ -130,6 +136,11 @@ input[type=text]:focus, input[type=password]:focus {
 }
 
 .btn2:hover {
+  opacity: 1;
+}
+
+
+.btn:hover {
   opacity: 1;
 }
 
@@ -155,24 +166,26 @@ input[type=text]:focus, input[type=password]:focus {
 	</form>
   </div>
   <div id="navbar-initial">
-  	<a class="active" href="Pesos.jsp">Insertar Pesos</a>
+  	<a href="Pesos.jsp">Insertar Pesos</a>
   	<a href="ConsPesos.jsp">Consultar Pesos y Gestionarlos</a>
   </div>
 </div>
 
-	<form accept-charset="ISO-8859-1" action="ingPesos" autocomplete="off"
+	<form accept-charset="ISO-8859-1" action="selPesos" autocomplete="off"
 		method="post" class="container">
 		<fieldset>
-			<h1>¡Registra tus Pesos!</h1>
-			<p>Todos los campos son de caracter obligatorios. Solo puedes registrar un peso por dia</p>
+			<h1>¡Modifica tus Pesos!</h1>
+			<p>Todos los campos son de caracter obligatorios.</p>
 			
-			<label for="fecha"><b>Fecha de medicion</b></label><input type="date" name="fecha" min="2020-01-01" required/> <br /><br />
+			<label for="fecha"><b>Fecha de medicion a modificar</b></label><input type="date" name="fecha" min="2020-01-01" required/> <br /><br />
 			
-			<label for="peso"><b>Peso</b></label><br /> <input placeholder="Ingresar Peso en Kilogramos" name="peso" type="text" /> <br required/> 
+			<label for="peso"><b>Peso a modificar</b></label><br /> <input name="peso" type="text" value="${peso.getPeso()}" required/> <br/> 
 			
-			<label for="descripcion"><b>Descripcion</b></label><br /> <input placeholder="Ingresar descripcion breve" name="descripcion" type="text" required/> <br />
+			<label for="descripcion"><b>Descripcion a modificar</b></label><br /> <input name="descripcion" type="text" value="${peso.getDescripcion()}" required/> <br />
+			
+			<input type="hidden" name  = "ID" value = "${peso.getID()}">	
 
-			<button type="submit" value="ingPesos" class="btn">¡Insertar Peso!</button> <br />
+			<input type="submit" name= "accion" value="Actualizar" class="btn"></input> <br />
 		</fieldset>	
 	</form>
 <script>

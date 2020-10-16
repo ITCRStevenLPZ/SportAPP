@@ -113,6 +113,19 @@ input[type=text]:focus, input[type=password]:focus {
 .btn:hover {
   opacity: 1;
 }
+.btn2 {
+  background-color: #9933ff;
+  color: white;
+  padding: 20px 20px;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+  opacity: 0.6;
+}
+
+.btn2:hover {
+  opacity: 1;
+}
 
 img {
   display: inline;
@@ -123,11 +136,11 @@ img {
 </head>
 <body>
 	<%
-		//response.setHeader("Cache-Control", "no-cache,no-store,must-revalidate");
+		response.setHeader("Cache-Control", "no-cache,no-store,must-revalidate");
 		
-		//if(session.getAttribute("nombreUsuario")==null){
-		//	response.sendRedirect("Login.jsp");	
-		//}
+		if(session.getAttribute("nombreUsuario")==null){
+			response.sendRedirect("Login.jsp");	
+		}
 	%>
 <div id="navbar">
   <img src="Logo.png" alt="Logo SportAPP" style="width:10%;">
@@ -135,28 +148,29 @@ img {
     <a href="Menu.jsp">Menu</a>
     <a href="Pesos.jsp">Control de Pesos</a>
     <a class="active" href="Frecuencias.jsp">Control de Frecuencias</a>
-    <a href="Tests.jsp">Pruebas Fisicas</a>
-    <a class="logout" href="#logout">Cerrar Sesion</a>
+    <a href="Tests.jsp">Pruebas Fisicas</a><br /><br /><br /><br />
+    <form accept-charset="ISO-8859-1" action="logout" autocomplete="off" method="get">
+    	<input type="submit" value="CerrarSesion" class="btn2"></input> <br />
+	</form>
   </div>
   <div id="navbar-initial">
-  	<a class="active" href="Frecuencias.jsp">Insertar Pesos</a>
-  	<a href="ConsFrec.jsp">Consultar Pesos</a>
-  	<a href="ModFrec.jsp">Modificar y Eliminar Pesos</a>
+  	<a class="active" href="Frecuencias.jsp">Insertar Frecuencias</a>
+  	<a href="ConsFrecuencias.jsp">Consultar Frecuencias y Gestionarlas</a>
   </div>
 </div>
-	<form accept-charset="ISO-8859-1" action="register" autocomplete="off"
+	<form accept-charset="ISO-8859-1" action="ingFrecuencias" autocomplete="off"
 		method="post" class="container">
 		<fieldset>
-			<h1>¡Registra tus Pesos!</h1>
+			<h1>¡Registra tus Frecuencias!</h1>
 			<p>Todos los campos son de caracter obligatorios.</p>
 			
 			<label for="fecha"><b>Fecha de medicion</b></label><input type="date" name="fecha" min="2020-01-01" required/> <br /><br />
 			
-			<label for="peso"><b>Peso</b></label><br /> <input placeholder="Ingresar Peso en Kilogramos" name="nombrePersona" type="text" /> <br required/> 
+			<label for="peso"><b>Frecuencia</b></label><br /> <input placeholder="Ingresar Frecuencia Obtenida" name="frecuencia" type="text" /> <br required/> 
 			
-			<label for="descripcion"><b>Descripcion</b></label><br /> <input placeholder="Ingresar descripcion breve" name="apellidoPersona" type="text" required/> <br />
+			<label for="descripcion"><b>Descripcion</b></label><br /> <input placeholder="Ingresar Descripcion Breve" name="descripcion" type="text" required/> <br />
 
-			<button type="submit" value="insertarPeso" class="btn">¡Insertar Peso!</button> <br />
+			<button type="submit" value="ingFrecuencia" class="btn">¡Insertar Frecuencia!</button> <br />
 		</fieldset>	
 	</form>
 </body>

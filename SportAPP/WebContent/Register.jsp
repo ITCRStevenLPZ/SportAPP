@@ -105,20 +105,23 @@ img {
 			
 			<label for="cedulaPersona"><b>Cédula</b></label><br /> <input placeholder="Ingresar Cedula" name="cedulaPersona" type="text" required/> <br /> 
 			
+			<label for="altura"><b>Altura (en centimetros)</b></label><br /><input placeholder="Ingresar Altura"name="altura" type="text" required/> <br />
+			
 			<label for="telefonoPersona"><b>Numero de Telefono</b></label><br /> <input placeholder="Ingresar Numero Telefonico" name="telefonoPersona" type="text" required/> <br />
+			
+			<b>Sexo</b> <br />
+			
+			<input checked="checked" name="Sexo" type="radio" value="Hombre" required/> <b>Hombre   </b> <input name="Sexo" type="radio" value="Mujer" required/><b> Mujer</b> <br /> <br />
+			
+			<label for="fechaNacimiento"><b>Fecha de nacimiento  </b> <input type="date" name="fechaNacimiento" min="1940-01-01" max="2030-12-31"> <br /> <br />	
 			
 			<label for="nombreUsuario"><b>Nombre de Usuario</b></label><br /> <input placeholder="Ingresar Nombre de Usuario" name="nombreUsuario" type="text" required/> <br /> 
 			
 			<label for="contrasena"><b>Contrasena</b></label><br /><input placeholder="Ingresar Contrasena" id ="contrasena" name="contrasena" type="password" required/> <br />
 			
-			<input type="checkbox" onclick="mostrarContrasena()"><b> Mostrar Contrasena </b> <br /> <br /> 
-			
+			<input type="checkbox" onclick="mostrarContrasena()"><b> Mostrar Contrasena </b> <br /> <br /> 	
 			
 			<label for="confirmarContrasena"><b>Repetir contrasena</b></label><br /> <input placeholder="Volver a Ingresar Contrasena" name="confirmarContrasena" type="password" required/> <br /> 
-			
-			<b>Sexo</b> <br />
-			
-			<input checked="checked" name="Sexo" type="radio" value="Hombre" required/> <b>Hombre   </b> <input name="Sexo" type="radio" value="Mujer" required/><b> Mujer</b> <br /> <br />
 			
 			<p>Preguntas de Seguridad. ¡Con ellas puedes recuperar tu contrasena!</p> 
 			
@@ -127,9 +130,7 @@ img {
 			<label for="pregunta2"><b>¿Cual es su deporte favorito?</b></label><br /> <input placeholder="Ingresar Respuesta a Pregunta" name="pregunta2" type="text" required/><br /> 
 			
 			<label for="pregunta3"><b>¿Cual es tu lugar de nacimiento?</b></label><br /> <input placeholder="Ingresar Respuesta a Pregunta" name="pregunta3" type="text" required/> <br />
-			
-			<label for="fecha"><b>Fecha de nacimiento  </b></label><input type="date" name="fecha" min="1940-01-01" required/> <br /><br />
-			
+						
 			<b>¿Has practicado deporte?</b> <br />
 			
 			<input checked="checked" name="Deporte" type="radio" value="Si" required/>Si he practricado deporte <input name="Deporte" type="radio" value="No" required/>No he practicado deporte <br /> <br />
