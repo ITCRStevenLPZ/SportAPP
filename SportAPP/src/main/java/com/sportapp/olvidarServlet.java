@@ -18,7 +18,7 @@ public class olvidarServlet extends HttpServlet {
 		String respuesta3 = req.getParameter("respuesta3");
 		
 		PrintWriter out = res.getWriter();
-		out.println(respuesta1 +"\n" + respuesta2+"\n" + respuesta3 +"\n" + cedulaPersona +"\n" + nombreUsuario +"\n");
+		
 	}
 
 }

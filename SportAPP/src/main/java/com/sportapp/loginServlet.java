@@ -17,7 +17,7 @@ public class loginServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		PersonaConex Conex = new PersonaConex();
 		String nombreUsuario = req.getParameter("nombreUsuario");
-		String contrasenaUsuario = req.getParameter("contrasenaUsuario");;	
+		String contrasenaUsuario = req.getParameter("contrasenaUsuario");	
 		PrintWriter out = res.getWriter();
 		int veri = Conex.ingresar(nombreUsuario, contrasenaUsuario);
 		if(veri==0) {

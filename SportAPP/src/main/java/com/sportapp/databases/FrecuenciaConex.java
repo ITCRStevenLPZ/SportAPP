@@ -17,7 +17,7 @@ public class FrecuenciaConex {
 		List<Frecuencias> lista = new ArrayList<>();
 		try {
 			con = c.conectarOracle();
-			ps = con.prepareStatement("Select distinct * from frecuencias inner join usuario_frecuencias on frecuencias.id_frecuencias = usuario_frecuencias.id_frecuencias");
+			ps = con.prepareStatement("select distinct * from frecuencias inner join usuario_frecuencias on frecuencias.id_frecuencias = usuario_frecuencias.id_frecuencias");
 			rs = ps.executeQuery();
 			while(rs.next()) {
 				Frecuencias f= new Frecuencias();

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Control de Frecuencias</title>
+<title>Home</title>
 
 <style>
 * {box-sizing: border-box;}
@@ -79,8 +79,8 @@ body {
 }
 .container2 {
   position: absolute;
-  margin: 70px 0px 0px 475px;
-  max-width: 600px;
+  margin: 600px 0px 0px 475px;
+  min-width: 1000px;
   padding: 20px;
   background-color: white;
 }
@@ -113,7 +113,6 @@ input[type=text]:focus, input[type=password]:focus {
 .btn:hover {
   opacity: 1;
 }
-
 .btn2 {
   background-color: #9933ff;
   color: white;
@@ -127,6 +126,7 @@ input[type=text]:focus, input[type=password]:focus {
 .btn2:hover {
   opacity: 1;
 }
+
 img {
   display: inline;
   margin: 0px 0px 0px 20px;
@@ -145,35 +145,32 @@ img {
 <div id="navbar">
   <img src="Logo.png" alt="Logo SportAPP" style="width:10%;">
   <div id="navbar-right">
-    <a href="Menu.jsp">Menu</a>
+    <a class="active" href="Menu.jsp">Menu</a>
     <a href="Pesos.jsp">Control de Pesos</a>
-    <a class="active" href="Frecuencias.jsp">Control de Frecuencias</a>
+    <a href="Frecuencias.jsp">Control de Frecuencias</a>
     <a href="Tests.jsp">Pruebas Fisicas</a><br /><br /><br /><br />
-    <form accept-charset="ISO-8859-1" action="logout" autocomplete="off" method="get">
+       <form accept-charset="ISO-8859-1" action="logout" autocomplete="off" method="get">
     	<input type="submit" value="CerrarSesion" class="btn2"></input> <br />
 	</form>
   </div>
   <div id="navbar-initial">
-  	<a class="active" href="Frecuencias.jsp">Insertar Frecuencias</a>
-  	<a href="ConsFrecuencias.jsp">Consultar Frecuencias y Gestionarlas</a>
+  	<a href="Menu.jsp">Acerca de Nosotros</a>
+  	<a class="active" href="ConfCuenta.jsp">Configurar Cuenta</a>
   </div>
 </div>
-	<form accept-charset="ISO-8859-1" action="ingFrecuencias" autocomplete="off"
-		method="post" class="container">
-		<fieldset>
-			<h1>¡Registra tus Frecuencias!</h1>
-			<p>Todos los campos son de caracter obligatorios.</p>
-			
-			<label for="fecha"><b>Fecha de medicion</b></label><input type="date" name="fecha" min="2020-01-01" required/> <br /><br />
-			
-			<label for="peso"><b>Frecuencia</b></label><br /> <input placeholder="Ingresar Frecuencia Obtenida" name="frecuencia" type="text" /> <br required/> 
-			
-			<label for="descripcion"><b>Descripcion</b></label><br /> <input placeholder="Ingresar Descripcion Breve" name="descripcion" type="text" required/> <br />
 
-			<button type="submit" value="ingFrecuencia" class="btn">¡Insertar Frecuencia!</button> <br />
-		</fieldset>	
-	</form>
-</body>
+ <form accept-charset="ISO-8859-1" action="modUsuario" autocomplete="off"
+	method="post" class="container">
+		<h1>¡Configura tu cuenta</h1><br /><br />
+		<p>¡Puedes cambiar tu contrasena o cambiar tus datos!</p><br /><br />
+		<input type="submit" name  = "accion" value = "Cambiar Contrasena" class = "btn"></input> <br />
+</form>
+ <form accept-charset="ISO-8859-1" action="modUsuario" autocomplete="off"
+	method="post" class="container2">
+		<input type="submit" name  = "accion" value = "Cambiar Datos de Cuenta" class = "btn"></input> <br />
+</form>
+
+
 <script>
 // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
 window.onscroll = function() {scrollFunction()};
@@ -186,4 +183,6 @@ function scrollFunction() {
   }
 }
 </script>
+
+</body>
 </html>

@@ -70,6 +70,19 @@ body {
     float: none;
   }
 }
+.btn2 {
+  background-color: #9933ff;
+  color: white;
+  padding: 20px 20px;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+  opacity: 0.6;
+}
+
+.btn2:hover {
+  opacity: 1;
+}
 img {
   display: inline;
   margin: 0px 0px 0px 20px;
@@ -91,17 +104,15 @@ img {
     <a class="active" href="Menu.jsp">Menu</a>
     <a href="Pesos.jsp">Control de Pesos</a>
     <a href="Frecuencias.jsp">Control de Frecuencias</a>
-    <a href="Tests.jsp">Pruebas Fisicas</a>
-    <a class="logout" href="/logout">Cerrar Sesion</a>
+    <a href="Tests.jsp">Pruebas Fisicas</a><br /><br /><br /><br />
+    <form accept-charset="ISO-8859-1" action="logout" autocomplete="off" method="get">
+    	<input type="submit" value="CerrarSesion" class="btn2"></input> <br />
+	</form>
   </div>
   <div id="navbar-initial">
   	<a class="active" href="Menu.jsp">Acerca de Nosotros</a>
-  	<a href="Contacto.jsp">Contacto</a>
+  	<a href="ConfCuenta.jsp">Configurar Cuenta</a>
   </div>
-</div>
-
-<div style="margin-top:210px;padding:15px 15px 2500px;font-size:30px">
-  <p><b>¡Bienvenido(a) a Acerca de Nosotros!</b></p>
 </div>
 
 

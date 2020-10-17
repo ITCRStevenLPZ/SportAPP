@@ -94,7 +94,7 @@ img {
 			<p>¡Si ya tienes cuenta, ingresa!</p>
 			<label for="nombreUsuario"><b>Nombre de Usuario</b></label><br /> <input placeholder="Ingresar Nombre de Usuario" name="nombreUsuario" type="text" required/> <br />
 
-			<label for="contrasenaUsuario"><b>Contrasena</b></label><br /> <input placeholder="Ingresar Contrasena" name="contrasenaUsuario" type="password" required/> <br />
+			<label for="contrasenaUsuario"><b>Contrasena</b></label><br /> <input placeholder="Ingresar Contrasena" id = "contrasenaUsuario" name="contrasenaUsuario" type="password" required/> <br />
 			
 			<input type="checkbox" onclick="mostrarContrasena()"><b> Mostrar Contrasena </b> <br /> <br /> 	
 
@@ -107,6 +107,17 @@ img {
 	<legend>¿Eres nuevo?, ¡Registrate!<br ></legend>
 	<button type="submit" class = "btn" value="register">¡Registrate Aca!</button>
 	</form>
+	
+<script>
+function mostrarContrasena() {
+  var x = document.getElementById("contrasenaUsuario");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
 	
 </body>
 </html>

@@ -71,4 +71,13 @@
 		<servlet-name>selFrecuencias</servlet-name>
 		<url-pattern>/selFrecuencias</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>modUsuario</servlet-name>
+		<servlet-class>com.sportapp.modUsuarioServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>modUsuario</servlet-name>
+		<url-pattern>/modUsuario</url-pattern>
+	</servlet-mapping>
 </web-app>

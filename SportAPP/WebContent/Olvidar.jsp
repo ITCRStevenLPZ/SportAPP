@@ -85,12 +85,18 @@ img {
 <body>
 <div class="bg-img">
 <img src="Logo.png" alt="Logo SportAPP" style="width:30%;">
-	<form accept-charset="UTF-8" action="olvidar" autocomplete="off"
+	<form accept-charset="UTF-8" action="modUsuario" autocomplete="off"
 		method="post" class = "container2">
 		<fieldset>
 			<h1>Cambio de Contrasena</h1>
 			<p>¡Para realizar el cambio de contrasena es necesario que ingreses todos estos datos!</p>
 			<label for="nombreUsuario"><b>Nombre de Usuario</b></label><br /> <input placeholder="Ingresar Nombre de Usuario" name="nombreUsuario" type="text" required/> <br />
+			
+			<label for="contrasena"><b>Contrasena Nueva</b></label><br /><input placeholder="Ingresar Contrasena" id ="contrasena" name="contrasena" type="password" required/> <br />
+			
+			<input type="checkbox" onclick="mostrarContrasena()"><b> Mostrar Contrasena </b> <br /> <br /> 	
+			
+			<label for="confirmarContrasena"><b>Repetir Contrasena Nueva</b></label><br /> <input placeholder="Volver a Ingresar Contrasena" name="confirmarContrasena" type="password" required/> <br /> 
 			
 			<label for="cedulaPersona"><b>Cedula</b></label><br /> <input placeholder="Ingresar Cedula" name="cedulaPersona" type="text" required/> <br />
 			
@@ -100,13 +106,8 @@ img {
 			  
 			<label for="respuesta3"><b>¿Cual es tu lugar de nacimiento?</b></label><br /> <input placeholder="Ingresar Respuesta a Pregunta" name="respuesta3" type="text" required/><br />
 			
-			<label for="contrasena"><b>Contrasena</b></label><br /><input placeholder="Ingresar Contrasena" id ="contrasena" name="contrasena" type="password" required/> <br />
-			
-			<input type="checkbox" onclick="mostrarContrasena()"><b> Mostrar Contrasena </b> <br /> <br /> 	
-			
-			<label for="confirmarContrasena"><b>Repetir contrasena</b></label><br /> <input placeholder="Volver a Ingresar Contrasena" name="confirmarContrasena" type="password" required/> <br /> 
 			   
-			<button type="submit" value="olvidar" class="btn" >¡Recuperar Contrasena!</button>
+			<input type="submit" name= "accion" value="Recuperar Contrasena" class="btn"></input> <br />
 		</fieldset>
 	</form>
 </div>
