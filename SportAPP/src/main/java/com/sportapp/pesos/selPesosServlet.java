@@ -36,14 +36,13 @@ public class selPesosServlet extends HttpServlet {
 			req.getRequestDispatcher("ModPesos.jsp").forward(req, res);
 			break;
 		case "Eliminar":
-			System.out.println(id);
 			conex.eliminar(id);
 			res.sendRedirect("ConsPesos.jsp");
 			break;
 		case "Actualizar":
 			java.util.Date utilDate = null;
 			try {
-				utilDate = new SimpleDateFormat("YYYY-MM-DD").parse(req.getParameter("fecha"));
+				utilDate = new SimpleDateFormat("yyyy-MM-dd").parse(req.getParameter("fecha"));
 			} catch (ParseException e) {
 				e.printStackTrace();
 			}

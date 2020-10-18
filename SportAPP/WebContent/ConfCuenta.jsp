@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Home</title>
+<title>Configurar Cuenta</title>
 
 <style>
 * {box-sizing: border-box;}
@@ -156,6 +156,7 @@ img {
   <div id="navbar-initial">
   	<a href="Menu.jsp">Acerca de Nosotros</a>
   	<a class="active" href="ConfCuenta.jsp">Configurar Cuenta</a>
+  	<a href="ConfApp.jsp"> Colaboradores</a>
   </div>
 </div>
 

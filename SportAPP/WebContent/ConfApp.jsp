@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Cambio de Contrasena</title>
+<title>Configurar Aplicacion</title>
 
 <style>
 * {box-sizing: border-box;}
@@ -49,12 +49,8 @@ body {
   background-color: #3366ff;
   color: white;
 }
-
 #navbar-right {
   float: right;
-}
-#navbar-initial {
-  float: initial;
 }
 
 @media screen and (max-width: 580px) {
@@ -69,21 +65,27 @@ body {
   #navbar-right {
     float: none;
   }
+  #navbar-initial {
+  	float: initial;
+	}
 }
+
 .container {
   position: absolute;
-  margin: 250px 0px 0px 475px;
+  margin: 300px 0px 0px 475px;
   min-width: 1000px;
   padding: 20px;
   background-color: white;
 }
 .container2 {
   position: absolute;
-  margin: 70px 0px 0px 475px;
-  max-width: 600px;
+  margin: 600px 0px 0px 475px;
+  min-width: 1000px;
   padding: 20px;
   background-color: white;
 }
+
+/* Full-width input fields */
 input[type=text], input[type=password] {
   width: 100%;
   padding: 15px;
@@ -124,6 +126,7 @@ input[type=text]:focus, input[type=password]:focus {
 .btn2:hover {
   opacity: 1;
 }
+
 img {
   display: inline;
   margin: 0px 0px 0px 20px;
@@ -135,8 +138,8 @@ img {
 	<%
 		response.setHeader("Cache-Control", "no-cache,no-store,must-revalidate");
 		
-		if(session.getAttribute("nombreUsuario")==null){
-			response.sendRedirect("Login.jsp");	
+		if(session.getAttribute("nombreUsuario")==null || !session.getAttribute("nombreUsuario").equals("Ronald001")){
+			response.sendRedirect("Menu.jsp");	
 		}
 	%>
 <div id="navbar">
@@ -152,35 +155,21 @@ img {
   </div>
   <div id="navbar-initial">
   	<a href="Menu.jsp">Acerca de Nosotros</a>
-  	<a class="active" href="ConfCuenta.jsp">Configurar Cuenta</a>
-  	<a href="ConfApp.jsp"> Colaboradores</a>
+  	<a href="ConfCuenta.jsp">Configurar Cuenta</a>
+  	<a class="active" href="ConfApp.jsp"> Colaboradores</a>
   </div>
 </div>
-	<form accept-charset="ISO-8859-1" action="modUsuario" autocomplete="off"
-		method="post" class="container">
-		<fieldset>
-			<h1>¡Cambia tu Informacion de Seguridad!</h1>
-			<p>Todos los campos son de caracter obligatorios.</p>
-			
-			<label for="contrasenaActual"><b>Contrasena Actual</b></label><br /> <input placeholder="Contrasena Actual" id = "contrasenaActual" name="contrasenaActual" type="password" required/ /> <br > 
-			
-			<input type="checkbox" onclick="mostrarContrasena()"><b> Mostrar Contrasena Actual </b> <br /> <br /> 
-			
-			<label for="contrasenaNueva"><b>Nueva Contrasena</b></label><br /> <input placeholder="Ingresar Contrasena Nueva" id = "contrasenaNueva" name="contrasenaNueva" type="password" required/> <br />
-			
-			<input type="checkbox" onclick="mostrarContrasena2()"><b> Mostrar Nueva Contrasena </b> <br /> <br /> 	
-			
-			<label for="repetirContrasena"><b>Repetir Nueva Contrasena</b></label><br /> <input placeholder="Repetir Contrasena Nueva" name="repetirContrasena"  type="password" required/> <br /> 	
-			
-			<label for="pregunta1"><b>¿Cual es su color favorito?</b></label><br /> <input placeholder="Ingresar Respuesta a Pregunta" name="pregunta1" value="${persona.getRespuesta1()}" type ="text" required/> <br /> 
-			
-			<label for="pregunta2"><b>¿Cual es su deporte favorito?</b></label><br /> <input placeholder="Ingresar Respuesta a Pregunta" name="pregunta2" value="${persona.getRespuesta2()}" type ="text" required/><br /> 
-			
-			<label for="pregunta3"><b>¿Cual es tu lugar de nacimiento?</b></label><br /> <input placeholder="Ingresar Respuesta a Pregunta" name="pregunta3" value="${persona.getRespuesta3()}" type ="text" required/> <br />
-			
-			<input type="submit" name = "accion" value="Actualizar Contrasena" class="btn"></input> <br />
-		</fieldset>	
-	</form>
+
+ <form accept-charset="ISO-8859-1" action="confCooper" autocomplete="off"
+	method="post" class="container">
+		<h1>¡Bienvenido de vuelta, colaborador!</h1><br /><br />
+		<p>¡Puedes cambiar los datos de los tests!</p><br /><br />
+		<input type="submit" name  = "accion" value = "Cambiar Datos Cooper" class = "btn"></input> <br />
+</form>
+ <form accept-charset="ISO-8859-1" action="confFlexiones" autocomplete="off"
+	method="post" class="container2">
+		<input type="submit" name  = "accion" value = "Cambiar Datos de Flexiones" class = "btn"></input> <br />
+</form>
 
 
 <script>
@@ -194,22 +183,6 @@ function scrollFunction() {
     document.getElementById("navbar").style.padding = "40px 10px";
   }
 }
-function mostrarContrasena() {
-	  var x = document.getElementById("contrasenaActual");
-	  if (x.type === "password") {
-	    x.type = "text";
-	  } else {
-	    x.type = "password";
-	  }
-	}
-function mostrarContrasena2() {
-	  var x = document.getElementById("contrasenaNueva");
-	  if (x.type === "password") {
-	    x.type = "text";
-	  } else {
-	    x.type = "password";
-	  }
-	}
 </script>
 
 </body>

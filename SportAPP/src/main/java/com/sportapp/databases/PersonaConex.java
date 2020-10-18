@@ -16,24 +16,6 @@ public class PersonaConex {
 	Connection con;
 	public PersonaConex() {
 	}
-	/*public List listar(int cedPersona) {
-		List<Persona> lista = new ArrayList<>();
-		try {
-			con = c.conectarOracle();
-			ps = con.prepareStatement("Select * from Persona");
-			rs = ps.executeQuery();
-			while(rs.next()) {
-				Pesos p= new Pesos();
-				p.setFecha(rs.getDate(1));
-				p.setPeso(rs.getFloat(2));
-				p.setDescripcion(rs.getString(3));
-				lista.add(p);
-			}
-		}catch(Exception e){
-			
-		}
-		return lista;
-	}*/
 	
 	public Boolean insertar (String nombre, String primerApellido, String segundoApellido, int cedula, int altura, int telefono,
 			String sexo, String fechaNacimiento, String nombreUsuario, String contrasena, String respuesta1, String respuesta2, String respuesta3) {

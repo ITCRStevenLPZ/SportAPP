@@ -1,0 +1,23 @@
+create table flexiones(flexiones_edad int PRIMARY KEY,flexiones_malo int, flexiones_medio int, flexiones_bueno int, flexiones_muy_bueno int, felxiones_excelente int );
+
+insert into flexiones(flexiones_edad,flexiones_malo, flexiones_medio, flexiones_bueno, flexiones_muy_bueno, felxiones_excelente) values (20,20,20,35,45,54);
+
+insert into flexiones(flexiones_edad,flexiones_malo, flexiones_medio, flexiones_bueno, flexiones_muy_bueno, felxiones_excelente) values (30,15,15,24,35,44);
+
+insert into flexiones(flexiones_edad,flexiones_malo, flexiones_medio, flexiones_bueno, flexiones_muy_bueno, felxiones_excelente) values (40,12,12,20,30,39);
+
+insert into flexiones(flexiones_edad,flexiones_malo, flexiones_medio, flexiones_bueno, flexiones_muy_bueno, felxiones_excelente) values (50,8,8,15,24,34)
+
+insert into flexiones(flexiones_edad,flexiones_malo, flexiones_medio, flexiones_bueno, flexiones_muy_bueno, felxiones_excelente) values (60,5,5,10,20,29);
+
+create table cooper(cooper_edad int PRIMARY KEY,cooper_malo int, cooper_medio int, cooper_bueno int, cooper_muy_bueno int, cooper_excelente int );
+
+insert into cooper(cooper_edad, cooper_malo, cooper_medio, cooper_bueno, cooper_muy_bueno, cooper_excelente) values (20,38,39,44,52,57);
+
+insert into cooper(cooper_edad, cooper_malo, cooper_medio, cooper_bueno, cooper_muy_bueno, cooper_excelente) values (30,34,35,40,48,53);
+
+insert into cooper(cooper_edad, cooper_malo, cooper_medio, cooper_bueno, cooper_muy_bueno, cooper_excelente) values (40,30,31,36,44,48);
+
+insert into cooper(cooper_edad, cooper_malo, cooper_medio, cooper_bueno, cooper_muy_bueno, cooper_excelente) values (50,25,26,32,40,44);
+
+insert into cooper(cooper_edad, cooper_malo, cooper_medio, cooper_bueno, cooper_muy_bueno, cooper_excelente) values (60,21,22,27,36,40);

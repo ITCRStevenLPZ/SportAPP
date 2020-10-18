@@ -73,6 +73,22 @@
 	</servlet-mapping>
 	
 	<servlet>
+		<servlet-name>cooper</servlet-name>
+		<servlet-class>com.sportapp.tests.cooper.cooperServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cooper</servlet-name>
+		<url-pattern>/cooper</url-pattern>
+	</servlet-mapping>
+		<servlet>
+		<servlet-name>flexiones</servlet-name>
+		<servlet-class>com.sportapp.tests.flexiones.flexionesServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>flexiones</servlet-name>
+		<url-pattern>/flexiones</url-pattern>
+	</servlet-mapping>
+	<servlet>
 		<servlet-name>modUsuario</servlet-name>
 		<servlet-class>com.sportapp.modUsuarioServlet</servlet-class>
 	</servlet>
@@ -80,4 +96,23 @@
 		<servlet-name>modUsuario</servlet-name>
 		<url-pattern>/modUsuario</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>confCooper</servlet-name>
+		<servlet-class>com.sportapp.tests.cooper.cooperDataServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>confCooper</servlet-name>
+		<url-pattern>/confCooper</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>confFlexiones</servlet-name>
+		<servlet-class>com.sportapp.tests.flexiones.flexionesDataServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>confFlexiones</servlet-name>
+		<url-pattern>/confFlexiones</url-pattern>
+	</servlet-mapping>
+	
 </web-app>

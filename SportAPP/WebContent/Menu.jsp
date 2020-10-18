@@ -92,11 +92,11 @@ img {
 </head>
 <body>
 	<%
-		//response.setHeader("Cache-Control", "no-cache,no-store,must-revalidate");
+		response.setHeader("Cache-Control", "no-cache,no-store,must-revalidate");
 		
-		//if(session.getAttribute("nombreUsuario")==null){
-		//	response.sendRedirect("Login.jsp");	
-		//}
+		if(session.getAttribute("nombreUsuario")==null){
+			response.sendRedirect("Login.jsp");	
+		}
 	%>
 <div id="navbar">
   <img src="Logo.png" alt="Logo SportAPP" style="width:10%;">
@@ -112,6 +112,7 @@ img {
   <div id="navbar-initial">
   	<a class="active" href="Menu.jsp">Acerca de Nosotros</a>
   	<a href="ConfCuenta.jsp">Configurar Cuenta</a>
+  	<a href="ConfApp.jsp"> Colaboradores</a>
   </div>
 </div>
 

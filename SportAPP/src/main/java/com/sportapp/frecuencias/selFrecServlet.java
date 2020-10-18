@@ -43,7 +43,7 @@ public class selFrecServlet extends HttpServlet {
 		case "Actualizar":
 			java.util.Date utilDate = null;
 			try {
-				utilDate = new SimpleDateFormat("YYYY-MM-DD").parse(req.getParameter("fecha"));
+				utilDate = new SimpleDateFormat("yyyy-MM-dd").parse(req.getParameter("fecha"));
 			} catch (ParseException e) {
 				e.printStackTrace();
 			}
