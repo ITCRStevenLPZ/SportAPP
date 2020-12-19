@@ -29,8 +29,8 @@ public class cooperDataServlet extends HttpServlet {
 		PrintWriter out = res.getWriter();
 		String accion = req.getParameter("accion");	
 		switch(accion) {
-		case "Cambiar Datos Flexiones":
-			res.sendRedirect("FlexionesConf.jsp");
+		case "Cambiar Datos Cooper":
+			res.sendRedirect("CooperConf.jsp");
 			break;
 		case "Consultar Datos Cooper":
 			List<CooperData>datos = conex.listarData();
@@ -46,7 +46,7 @@ public class cooperDataServlet extends HttpServlet {
 			int excelente = Integer.parseInt((String) req.getParameter("excelente"));
 			if(conex.VerificarEdad(edad)==false) {
 				conex.insertarData(edad, malo, medio, bueno, muyBueno, excelente);
-				res.sendRedirect("FlexionesConf.jsp");
+				res.sendRedirect("CooperConf.jsp");
 			}else {
 				String Error = "Error, has ingresado una edad que ya esta registrada, verifica a la derecha!";
 				out.println("<script type='text/javascript'>");
@@ -69,11 +69,11 @@ public class cooperDataServlet extends HttpServlet {
 			co1.setMuy_bueno(Integer.parseInt((String) req.getParameter("muyBueno")));
 			co1.setExcelente(Integer.parseInt((String) req.getParameter("excelente")));
 			conex.actualizarData(co1);
-			res.sendRedirect("FlexionesConf.jsp");
+			res.sendRedirect("CooperConf.jsp");
 			break;
 		case "Eliminar":
 			conex.eliminarData(Integer.parseInt((String) req.getParameter("edad")));
-			res.sendRedirect("FlexionesConf.jsp");
+			res.sendRedirect("CooperConf.jsp");
 			break;
 		default:
 			throw new AssertionError();

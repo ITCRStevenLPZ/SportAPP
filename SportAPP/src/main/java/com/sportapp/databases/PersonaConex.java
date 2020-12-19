@@ -17,29 +17,20 @@ public class PersonaConex {
 	public PersonaConex() {
 	}
 	
-	public Boolean insertar (String nombre, String primerApellido, String segundoApellido, int cedula, int altura, int telefono,
+	public void insertar (String nombre, String primerApellido, String segundoApellido, int cedula, int altura, int telefono,
 			String sexo, String fechaNacimiento, String nombreUsuario, String contrasena, String respuesta1, String respuesta2, String respuesta3) {
 		try {
 			con = c.conectarOracle();
-			ps = con.prepareStatement("SELECT username_check('"+nombreUsuario+"') FROM registro");
-			rs = ps.executeQuery();
-			ps = con.prepareStatement("SELECT cedula_check("+cedula+") FROM registro");
-			rs2 = ps.executeQuery();
-			if(rs==null || rs2!=null) {
-				return null;
-			}else {
-				ps = con.prepareStatement("INSERT INTO usuarios(numero_cedula,altura,primer_apellido, segundo_apellido, nombre, sexo, telefono, fecha_nacimiento) VALUES('"+ cedula+ "', '" + altura + "', '" + primerApellido + "', '" + segundoApellido + "', '" + nombre + "', '" + sexo + "', '" + telefono + "', to_date('" + fechaNacimiento + "', 'YYYY-MM-DD')" +")");
-				ps.executeQuery();
-				ps = con.prepareStatement("INSERT INTO registro(numero_cedula,nombre_usuario,contrasena,res_pre_1, res_pre_2,res_pre_3) VALUES('"+ cedula+ "', '" + nombreUsuario + "', '" + contrasena + "', '" + respuesta1 + "', '" + respuesta2 + "', '" + respuesta3 +"')");
-				ps.executeQuery();
-				return true;
-			}
+			ps = con.prepareStatement("INSERT INTO usuarios(numero_cedula,altura,primer_apellido, segundo_apellido, nombre, sexo, telefono, fecha_nacimiento) VALUES('"+ cedula+ "', '" + altura + "', '" + primerApellido + "', '" + segundoApellido + "', '" + nombre + "', '" + sexo + "', '" + telefono + "', to_date('" + fechaNacimiento + "', 'YYYY-MM-DD')" +")");
+			ps.executeQuery();
+			ps = con.prepareStatement("INSERT INTO registro(numero_cedula,nombre_usuario,contrasena,res_pre_1, res_pre_2,res_pre_3) VALUES('"+ cedula+ "', '" + nombreUsuario + "', '" + contrasena + "', '" + respuesta1 + "', '" + respuesta2 + "', '" + respuesta3 +"')");
+			ps.executeQuery();
 		}catch(Exception e){
 			e.printStackTrace();
-			return null;
 		}
-		
 	}
+		
+
 	
 	public int ingresar(String nombreUsuario, String contrasena) {
 		try {

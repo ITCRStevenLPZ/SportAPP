@@ -40,19 +40,13 @@ public class registerServlet extends HttpServlet {
 			out.println("</head><body></body></html>");
 			res.sendRedirect("Register.jsp");
 		}else {
-			Boolean veri = Conex.insertar(nombrePersona, apellidoPersona, apellidoPersona2, cedulaPersona, altura, telefonoPersona, sexo, fechaNacimiento,nombreUsuario, contrasena,respuesta1,respuesta2,respuesta3);
-			if(veri==null) {
-				String Error = "Error, has ingresado un nombre de usuario que ya existe o la cedula ya esta registrada !";
-				out.println("<script type='text/javascript'>");
-				out.println("alert(" + "'" + Error + "'" + ");</script>");
-				out.println("</head><body></body></html>");
-			}else {
-				HttpSession session = req.getSession();
-				session.setAttribute("nombreUsuario", nombreUsuario);
-				session.setAttribute("contrasena", contrasena);
-				session.setAttribute("cedula", cedulaPersona);
-				res.sendRedirect("Menu.jsp");
-			}
+			Conex.insertar(nombrePersona, apellidoPersona, apellidoPersona2, cedulaPersona, altura, telefonoPersona, sexo, fechaNacimiento,nombreUsuario, contrasena,respuesta1,respuesta2,respuesta3);
+			HttpSession session = req.getSession();
+			session.setAttribute("nombreUsuario", nombreUsuario);
+			session.setAttribute("contrasena", contrasena);
+			session.setAttribute("cedula", cedulaPersona);
+			res.sendRedirect("Menu.jsp");
+			
 
 		}
 		
