@@ -22,8 +22,8 @@ public class FrecuenciaConex {
 			while(rs.next()) {
 				Frecuencias f= new Frecuencias();
 				f.setID(rs.getInt(1));
-				f.setFecha(rs.getDate(3));
-				f.setFrecuencia(rs.getInt(4));
+				f.setFecha(rs.getDate(4));
+				f.setFrecuencia(rs.getInt(3));
 				f.setDescripcion(rs.getString(2));
 				lista.add(f);
 			}
@@ -39,9 +39,9 @@ public class FrecuenciaConex {
 		try {
 			con = c.conectarOracle();
 			ps = con.prepareStatement("INSERT INTO frecuencias(descripcion,frecuencia,fecha) VALUES ('"+descripcion+"', "+frecuencia+", to_date('" + fecha + "', 'YYYY-MM-DD'))");
-			ps.executeQuery();
+			ps.executeUpdate();
 			ps = con.prepareStatement("INSERT INTO usuario_frecuencias(numero_cedula) VALUES ("+cedula+")");
-			ps.executeQuery();
+			ps.executeUpdate();
 			
 		}catch(Exception e){
 			e.printStackTrace();
@@ -57,8 +57,8 @@ public class FrecuenciaConex {
 			rs = ps.executeQuery();
 			while(rs.next()) {
 				f.setID(rs.getInt(1));
-				f.setFecha(rs.getDate(3));
-				f.setFrecuencia(rs.getInt(4));
+				f.setFecha(rs.getDate(4));
+				f.setFrecuencia(rs.getInt(3));
 				f.setDescripcion(rs.getString(2));
 				//System.out.println(p.getFecha());
 			}
@@ -96,9 +96,9 @@ public class FrecuenciaConex {
 		try {
 			con = c.conectarOracle();
 			ps = con.prepareStatement(sql);
-			ps.executeQuery();
+			ps.executeUpdate();
 			ps = con.prepareStatement(sql2);
-			ps.executeQuery();
+			ps.executeUpdate();
 		
 		}catch(Exception e){
 			e.printStackTrace();

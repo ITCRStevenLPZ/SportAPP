@@ -39,9 +39,9 @@ public class PesoConex {
 		try {
 			con = c.conectarOracle();
 			ps = con.prepareStatement("INSERT INTO pesos(descripcion,peso,fecha) VALUES ('"+descripcion+"', "+peso+", to_date('" + fecha + "', 'YYYY-MM-DD'))");
-			ps.executeQuery();
+			ps.executeUpdate();
 			ps = con.prepareStatement("INSERT INTO usuario_pesos(numero_cedula) VALUES ("+cedula+")");
-			ps.executeQuery();
+			ps.executeUpdate();
 			
 		}catch(Exception e){
 			e.printStackTrace();
@@ -96,9 +96,9 @@ public class PesoConex {
 		try {
 			con = c.conectarOracle();
 			ps = con.prepareStatement(sql);
-			ps.executeQuery();
+			ps.executeUpdate();
 			ps = con.prepareStatement(sql2);
-			ps.executeQuery();
+			ps.executeUpdate();
 		
 		}catch(Exception e){
 			e.printStackTrace();

@@ -22,9 +22,9 @@ public class PersonaConex {
 		try {
 			con = c.conectarOracle();
 			ps = con.prepareStatement("INSERT INTO usuarios(numero_cedula,altura,primer_apellido, segundo_apellido, nombre, sexo, telefono, fecha_nacimiento) VALUES('"+ cedula+ "', '" + altura + "', '" + primerApellido + "', '" + segundoApellido + "', '" + nombre + "', '" + sexo + "', '" + telefono + "', to_date('" + fechaNacimiento + "', 'YYYY-MM-DD')" +")");
-			ps.executeQuery();
+			ps.executeUpdate();
 			ps = con.prepareStatement("INSERT INTO registro(numero_cedula,nombre_usuario,contrasena,res_pre_1, res_pre_2,res_pre_3) VALUES('"+ cedula+ "', '" + nombreUsuario + "', '" + contrasena + "', '" + respuesta1 + "', '" + respuesta2 + "', '" + respuesta3 +"')");
-			ps.executeQuery();
+			ps.executeUpdate();
 		}catch(Exception e){
 			e.printStackTrace();
 		}
@@ -80,7 +80,7 @@ public class PersonaConex {
 	}
 	
 	public Persona listar(int cedula) {
-		String sql = "SELECT * FROM usuarios where usuarios.numero_cedula = " + cedula;
+		String sql = "SELECT nombre,primer_apellido,segundo_apellido,numero_cedula,altura,telefono,sexo,fecha_nacimiento FROM usuarios where usuarios.numero_cedula = " + cedula;
 		String sql2 = "SELECT * FROM registro where registro.numero_cedula = " + cedula;
 		Persona p = new Persona();
 		try {

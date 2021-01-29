@@ -179,7 +179,7 @@ tr:nth-child(even) {
 	<%
 	response.setHeader("Cache-Control", "no-cache,no-store,must-revalidate");
 	
-	if(session.getAttribute("nombreUsuario")==null || !session.getAttribute("nombreUsuario").equals("Ronald001")){
+	if(session.getAttribute("nombreUsuario")==null || !session.getAttribute("nombreUsuario").equals("ronald001")){
 		response.sendRedirect("Menu.jsp");	
 	}
 	%>

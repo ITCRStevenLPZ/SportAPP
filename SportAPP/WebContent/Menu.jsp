@@ -87,6 +87,25 @@ img {
   display: inline;
   margin: 0px 0px 0px 20px;
 }
+.bg-img {
+  /* The image used */
+  background-color: white;
+
+  min-height: 1700px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-size: cover;
+  position: relative;
+
+}
+.container2 {
+  position: absolute;
+  margin: 200px 0px 0px 800px;
+  max-width: 1000px;
+  padding: 20px;
+  background-image: white;
+}
 </style>
 
 </head>

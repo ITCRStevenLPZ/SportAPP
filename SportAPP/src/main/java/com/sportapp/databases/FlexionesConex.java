@@ -71,9 +71,9 @@ public class FlexionesConex {
 		try {
 			con = c.conectarOracle();
 			ps = con.prepareStatement("INSERT INTO flexiones(fecha_test,cantidad_flexiones,resultado) VALUES (to_date('" + fecha + "', 'YYYY-MM-DD'),"+res+", '"+evaluarFlexiones(edad,res)+"')");
-			ps.executeQuery();
+			ps.executeUpdate();
 			ps = con.prepareStatement("INSERT INTO usuario_flexiones(numero_cedula) VALUES ("+cedula+")");
-			ps.executeQuery();
+			ps.executeUpdate();
 			
 		}catch(Exception e){
 			e.printStackTrace();
@@ -127,9 +127,9 @@ public class FlexionesConex {
 		try {
 			con = c.conectarOracle();
 			ps = con.prepareStatement(sql);
-			ps.executeQuery();
+			ps.executeUpdate();
 			ps = con.prepareStatement(sql2);
-			ps.executeQuery();
+			ps.executeUpdate();
 		
 		}catch(Exception e){
 			e.printStackTrace();

@@ -73,9 +73,9 @@ public class CooperConex {
 		try {
 			con = c.conectarOracle();
 			ps = con.prepareStatement("INSERT INTO test_cooper(fecha_test,distancia,resultado) VALUES (to_date('" + fecha + "', 'YYYY-MM-DD'),"+distancia+", '"+evaluarCooper(edad,res)+"')");
-			ps.executeQuery();
+			ps.executeUpdate();
 			ps = con.prepareStatement("INSERT INTO usuario_cooper(numero_cedula) VALUES ("+cedula+")");
-			ps.executeQuery();
+			ps.executeUpdate();
 			
 		}catch(Exception e){
 			e.printStackTrace();
@@ -130,9 +130,9 @@ public class CooperConex {
 		try {
 			con = c.conectarOracle();
 			ps = con.prepareStatement(sql);
-			ps.executeQuery();
+			ps.executeUpdate();
 			ps = con.prepareStatement(sql2);
-			ps.executeQuery();
+			ps.executeUpdate();
 		
 		}catch(Exception e){
 			e.printStackTrace();

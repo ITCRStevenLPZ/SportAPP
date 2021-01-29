@@ -9,9 +9,9 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Conexion {
-	String dbURL = "jdbc:postgresql://localhost:5432/pruebas";
-    String username = "ronald";
-    String password = "Roniexy50";
+	String dbURL = "jdbc:postgresql://localhost:5432/sportapp";
+    String username = "postgres";
+    String password = "roniexy50";
 	Cluster cluster;
 	Session session = null;
 	Connection conn = null;
